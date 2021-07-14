@@ -1,67 +1,170 @@
 /* body css */
 body{
-    font-family: 'Poppins', sans-serif;
-    
+    margin: 0;
+    padding:0;
+    font-family: 'Poppins', sans-serif;    
 }
-/* Banner css starts here */
+/* header css starts here */
 .banner-container{
-    left: 0px;
-    top: 0px;
     background-color: #2D25A0; 
-    width: 1440px;
-    height: 677px;
+    width:100%;
+    height: 900px;
+    display:flex;
+    margin-bottom: 70px;
     overflow: hidden;
-
-}
-.banner{
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    margin-bottom: 30px;
-    
+    justify-content: center;
+    margin-left: 0;
 }
 .banner-info{
     display: grid;
     grid-template-rows: repeat(2,1fr);
-    padding-left: 150px;
-    padding-bottom: 130px;
-    padding-top:120px;
-    margin-bottom: 50px;
+    padding-left: 120px;
+    padding-top: 156px;
+    padding-bottom: 240px;
 
 }
-h1{
-    color: white;
-    font-weight: 700;
+.banner-heading{
     font-size: 64px;
-    
+    font-weight: 700;
+    color: white;
+    padding-right: 80px;
 }
-.banner-animation img{
-    width: 556.01px;
-    height: 438px;
-    padding-top: 150px;
-    padding-right: 140px;
-    padding-bottom: 56px;
-    padding-left: 80px; 
-    
-}
+
 button{
     background-color: #E02C6D;
     font-size: 20px;
     font-weight: 300;
     color: white;
-    text-decoration: none;
     width:168px;
     height:44px;
-    padding: 10px, 24px, 10px, 24px
-    ;
+    padding: 10px, 24px, 10px, 24px;
     box-shadow: 5px 5px 5px rgb(9, 5, 58);
 }
 .fa-arrow-right{
     font-size: 18px;
 }
-.banner:hover .banner-animation {
-      transform: scale(1.5) rotateY(360deg);
-    transform-origin: center;
-    transition: transform 1s ease-in-out;
+.banner-animation{
+    padding-bottom:20px;
+    padding-right: 140px;
+    padding-top: 120px;
+   
 }
-/* Banner css ends here */
+.banner-animation img{
+    width: 80%;
+    padding-left: 100px;
+}
+.banner-animation:hover img {
+    position: relative;
+    transform: scale(1.5) rotateY(360deg);
+    transform-origin: center;
+    transition: transform 3s ease-in-out;}
+
+/* header css ends here */
+
+/* photo album */
+.album {
+     margin-top: 50px;
+    margin-left: 180px;
+    margin-right: 210px;
+}
+.photo-album{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-row-gap: 30px;
+    grid-column-gap: 27px;
+}
+.photo-frame{
+    width: 330px;
+    height: 474px;
+    border: 1px solid white;
+    overflow: hidden;
+    box-shadow: 10px 1px 20px lightgray;
+}
+.photo-frame img{
+    width: 100%;
+}
+.photo-frame{
+    display: flex;
+flex-direction: column;
+align-items: flex-start;
+    padding: 15px;
+}
+.photo-detail{
+    color: rgba(0, 0, 0, 0.589);
+    font-size: 16px;
+    font-weight: 100;
+   
+}
+.photo-detail h3{
+    color: black;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 0px;
+}
+/* youtube styles */
+h2{
+    background-color: #E02C6D;
+    font-size: 24px;
+    font-weight: 300;
+    color: white;
+    text-decoration: none;
+    width:500px;
+    height:44px;
+    padding: 20px, 24px, 10px, 24px
+    ;
+}
+.video-container{
+    width:100%;
+    border: 1px solid white;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 30px;
+    margin-bottom:27px;
+    box-shadow: 20x 20x 30px rgb(228, 103, 103);
+}
+.live{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-column-gap: 15px;
+}
+.video-container.fa-youtube{
+    font-size: 30px;
+    padding-left: 20px;
+}
+/* Footer-icons styles */
+.footer-elements{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+
+}
+.footer-icons{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 20px;
+}
+.footer-icon{
+    color: gray;
+    font-size: 25px;
+    font-weight: 200px;
+    text-align: center;
+    background-color: lightgray;
+    border-radius: 15px;
+    margin-bottom: 27px;
+}
+@media (max-width:360px) {
+    .banner{
+        width:100%;
+        grid-template-columns:repeat(1,1fr);
+    }
+    
+}
+/* .banner-animation img{
+    width: 25%;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom:0px;
+    padding-left: 0px; } */
